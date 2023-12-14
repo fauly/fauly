@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         // Success
-        echo "Thank You! Your message has been sent.";
+        echo "Thank you for reaching out, i'll message you soon.";
     } else {
         // Error
-        echo "Oops! Something went wrong and we couldn't send your message.";
+        echo "Oops! Something went wrong and I couldn't get your message. Reach out directly via email or Discord.";
     }
 }
 ?>
