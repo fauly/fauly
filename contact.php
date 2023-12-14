@@ -2,10 +2,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $contact = filter_var(trim($_POST["contact"]));
     $message = strip_tags(trim($_POST["message"]));
 
-    if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (empty($name) OR empty($message) OR empty($contact) {
         // Handle error here
         echo "Invalid input.";
         exit;
@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "New contact from $name";
 
     $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
+    $email_content .= "Contact: $contact\n\n";
     $email_content .= "Message:\n$message\n";
 
-    $email_headers = "From: $name <$email>";
+    $email_headers = "From: $name <$contact>";
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         // Success        
