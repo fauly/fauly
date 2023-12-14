@@ -21,8 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_headers = "From: $name <$email>";
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
-        // Success
-        echo "Thank you for reaching out, i'll message you soon.";
+        // Success        
+        header("Location: thankyou.html");
+        exit;
     } else {
         // Error
         echo "Oops! Something went wrong and I couldn't get your message. Reach out directly via email or Discord.";
