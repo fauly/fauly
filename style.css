@@ -42,6 +42,7 @@ p {
     max-width: 70vw;
     font-size: 0.8rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 .collaborate {
@@ -61,4 +62,6 @@ p {
 }
 .thank-you-message {
     padding-top: 100px;
+    width:100%;
+    text-align: center;
 }
