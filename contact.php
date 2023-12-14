@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact = filter_var(trim($_POST["contact"]));
     $message = strip_tags(trim($_POST["message"]));
 
-    if (empty($name) OR empty($message) OR empty($contact) {
+    if (empty($name) OR empty($message) OR empty($contact)) {
         // Handle error here
         echo "Invalid input.";
         exit;
