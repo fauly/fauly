@@ -85,6 +85,7 @@ strong {
     transform: translate(-50%, -50%);
     margin: auto;
     padding: 5vw;
+    padding-bottom: 0;
     border: 1px solid #000000;
     border-radius: 10px;
     background-color: #f0f0f0;
