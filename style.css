@@ -111,6 +111,8 @@ strong {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .contact-form button:hover {
