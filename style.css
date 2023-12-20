@@ -58,6 +58,7 @@ strong {
     margin-top: 2rem;
     font-weight: 700;
     display: inline; /* Make span inline */
+    padding-bottom: 5vh;
 }
 
 .blink {
